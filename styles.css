@@ -13,6 +13,11 @@
     --visual-background: #1124d40c;
     --button: hsl(224, 30%, 27%);
 
+    --dark-kusala-orange: rgb(116, 58, 0);
+    --kusala-orange: rgb(234,124,13);
+    --light-kusala-orange: rgb(236,146,52);
+    --super-light-kusala-orange: rgb(231, 228, 225);
+    --beige: rgb(244,211,171);
 }
 
 * {
@@ -22,180 +27,70 @@
 }
 
 body {
-    background-color: white;
+    background-color: var(--super-light-kusala-orange);
     font-size: 18px;
     font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
 }
 
-h1 {
-    font-size: 18px;
+h1, h2 {
+    color: var(--super-light-kusala-orange);
 }
 
-p .score {
-    font-weight: bold;
+p {
+    font-size: 14px;
 }
 
 .container {
-    width: 720px;
-    height: 500px;
+    background-color: var(--beige);
+    width: 1000px;
+    height: 666px;
     margin: 200px auto;
     display: flex;
+    border-radius: 2rem;
     box-shadow: 5px 5px 20px lightgray;
-    border-radius: 2rem;
 }
 
-.results {
-    background: linear-gradient(var(--purple1), var(--purple2));
-    opacity: .9;
+.left {
+    background-color: var(--light-kusala-orange);
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    border-radius: 2rem;
-}
-
-.results h1 {
-    color: white;
-    opacity: 0.6;
-    margin: 35px auto;
-}
-
-.results h2 {
-    margin-bottom: 20px;
-    color: white;
-}
-
-.results p {
-    font-size: 15px;
-    text-align: center;
-    font-weight: bold;
-    line-height: 1.5;
-    padding: 0 70px;
-}
-
-.opaque {
-    color: white;
-    opacity: 0.7;
-}
-
-.results .score {
-    background: linear-gradient(var(--purple3), var(--purple4));
-    opacity: .9;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-bottom: 35px;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.img-container {
+    width: 66%;
+    margin-bottom: 60px;
+}
+
+img {
+    width: 100%;
     border-radius: 50%;
+    opacity: 0.9;
 }
 
-.results .score .big {
-    font-size: 50px;
-    color: white;
-    opacity: 1;
-    display: block;
-    height: 60px;
+.name-and-position {
+    text-align: center;
 }
 
-/* summary */
+.title {
+    font-size: 20px;
+}
 
-/* summary container */
-.summary {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.right {
     width: 50%;
-    /* for reference only */
-        /* border: blue 1px solid; */
-    }
-
-.summary h1 {
-    align-self: start;
-    margin-top: 35px;
-    margin-left: 40px;
-    font-size: bold;
+    padding: 50px;
 }
 
-.summary .sum-box-container {
-    /* background-color: antiquewhite; */
-    width: 80%;
-    margin: 30px 35px;
-    height: 290px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    /* for reference only */
-    /* border: red 1px solid; */
+p, ul {
+    padding: 12px;
+    color: var(--dark-kusala-orange);
+    font-size: 14px;
 }
 
-.summary .sum-box-container .sum-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 55px;
-    border-radius: 10px;
-    /* for refence only */
-    /* border: red 1px solid; */
+ul {
+    margin: 10px;
 }
-
-
-.react {background-color: var(--reaction-background);}
-.mem {background-color: var(--memory-background);}
-.ver {background-color: var(--verbal-background);}
-.vis {background-color: var(--visual-background);}
-
-
-.reaction,
-.memory,
-.verbal,
-.visual {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-left: 10px;
-}
-
-.reaction p,
-.memory p,
-.verbal p,
-.visual p {
-    margin-left: 10px;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.reaction p {color: var(--reaction);}
-.memory p {color: var(--memory);}
-.verbal p {color: var(--verbal);}
-.visual p {color: var(--visual);}
-
-.react p, .mem p, .ver p, .vis p {
-    margin-right: 10px;
-}
-
-.sum-box-container p {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.gray {
-    color: gray;
-}
-
-
-.summary button {
-    background-color: var(--button);
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    width: 80%;
-    height: 55px;
-    border-radius: 30px;
-}
-
-.summary button:hover {
-    background-color: var(--purple2);
-}
-
